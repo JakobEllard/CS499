@@ -86,6 +86,27 @@
                     <legend>Contact Information</legend>
 
                     <!--Create the Contact Information form here-->
+                    <p>
+                        <label for = "first-name">First Name </label> 
+                        <input type = "text" id = "first-name" name = "first-name" placeholder = "e.g. Jakob">
+                    </p>
+                    
+                    <p>
+                        <label for = "last-name">Last Name </label>
+                        <input type = "text" id = "last-name" name = "last-name" placeholder = "e.g. Ellard">
+
+                    </p>
+                    
+                    <p>
+                        <label for = "email">Email Address </label>
+                        <input type = "text" id = "email" name = "email" placeholder = "example@example.com">
+                    </p>
+
+                    <p>
+                        <label for = "phone-number">Phone Number </label>
+                        <input type = "text" id = "phone-number" name = "phone-number" placeholder = "911-111-1111">
+                    </p>
+
                     
                 </fieldset>
 
@@ -98,17 +119,48 @@
                     <p>Attending Kickoff Breakfast? (Radio Button - Choose One):</p>
                     <p>
                         <!--Complete code here-->
+                        <input type = "radio" name = "breakfast" value = "yes" id = "y" checked>
+                        <label for = "y"> Yes, attending Kickoff Breakfast at Old National Events Plaza</label>
                     </p>
+
+                    <p>
+                        <input type = "radio" name = "breakfast" value = "no" id = "n">
+                        <label for = "n"> No, reporting directly to volunteer service site</label>
+                    </p>
+                        
+
+                    
 
                     <!-- Checkbox Widgets (Multiple Choice) -->
                     <p>Preferred Volunteer Work Types (Checkbox - Choose Multiple):</p>
                     <p>
                         <!--Complete code here-->
-                    </p>
+                        <input type = "checkbox" name = "landscaping" id = "landscaping" checked>
+                        <label for = "landscaping">LandScaping and Outdoor Maintenance</label>
+                        <br>
+
+                        <input type = "checkbox" name = "painting" id = "painting">
+                        <label for = "painting">Painting and Facility Maintenance</label>
+                        <br>
+
+                        <input type = "checkbox" name = "cleaning" id = "cleaning" checked>
+                        <label for = "cleaning">Cleaning and Reorganization</label>
+                        <br>
+
+                        <input type = "checkbox" name = "youth" id = "youth">
+                        <label for = "youth">Preschool and Youth Activities Support</label>
+                  
 
                     <!-- Select Dropdown Menu -->
                     <p>
                         <!--Complete code here-->
+                        <label for = "county" > Preferred County: </label>
+                        <select name = "county"> 
+                            <option value="warrick"> Warrick County</option>
+                            <option value="vanderburgh" selected> Vanderburgh County</option>
+                            <option value = "posey"> Posey County</option>
+
+                        </select>
                     </p>
                 </fieldset>
 
