@@ -13,3 +13,5 @@ Core Features:
 4. Carry over exercises from previous days and make recomendations
 
 I believe this should be feasible to complete in 8 weeks, it will be a lot of components, information drawn from a database, and then displayed as a recommendation based on a simple formula. The logbook portion is absolutely necessary, recommendations could be cut if implementation is too complex or time consuming, I could go further and display a graph for weight progression, add a deload period at the end of a training block, or automate when to end a training block if time allows. 
+
+The Information I see myself needing to store are the date in the training block, the exercise names, sets, and then I will probably set up a Boolean for whether the user is in a deficit, and how difficult the current block is. 
