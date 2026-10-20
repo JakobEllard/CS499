@@ -1,0 +1,197 @@
+/* ==========================================================================
+   CS 499: JavaScript Functions, Objects & Exception Handling
+   ========================================================================== */
+
+// ==========================================================================
+// PART 1 — Functions & Arguments
+// ==========================================================================
+
+// 1.1 Standard Function Declaration & Argument Mismatch
+
+//TODO 
+/*
+function calculateScore(basePoints, bonusPoints){
+    return basePoints + bonusPoints;
+}
+
+console.log("Two args:", calculateScore(100, 50)); //150
+console.log("One arg:", calculateScore(100)); //Not a number
+console.log("Three args:", calculateScore(100, 50, 25)); //150 - first two only
+
+
+// 1.2 Arrow Function Conversion (Standard Expression)
+
+function convertToFahrenheit(celsius) {
+return (celsius * 9 / 5) + 32;
+}
+
+// 1.3 Arrow Function Conversion (Implicit Return Syntax)
+const triplex = (x) => x*3;
+*/
+//TODO
+
+
+
+// TODO
+
+
+// ==========================================================================
+// PART 2 — Objects, Getters/Setters & Maps
+// ==========================================================================
+
+// 2.1 Object Literal with Getter & Setter
+// const bankAccount = {
+//     holder: Jakob,
+//     balance: 500000,
+//     get formattedBalance(){//runs like a property
+//         return "$" + this.balance;
+//     },
+//     set deposit(depo){//runs like a function
+//         this.balance +=depo
+//     }
+    
+// }
+
+
+//TODO 
+
+//2.2 Plain Objects as Maps vs. Map Object
+// let inventory = {
+//     item101: "Laptop",
+//     item102: "Keyboard"
+// };
+// inventory["item103"] = "Mouse";//functionally the same as a key value pair
+// console.log("Item 102:", inventory["item102"]);
+
+// Task 2.2 Map Implementation
+// const map = new Map();
+
+// map.set(1, "Manager");
+// map.set(2, "CEO");
+
+// console.log(map.has(1));
+
+// console.log(map.size);
+
+
+
+//TODO
+
+// ==========================================================================
+// PART 3 — Built-in Objects
+// ==========================================================================
+
+// 3.1 String Object Manipulation
+// let rawProductCode = "   sku-98765-electronics   ";
+// rawProductCode = rawProductCode.trim();
+// rawProductCode = rawProductCode.toUpperCase();
+// parts = rawProductCode.split("-")
+// console.log(parts);
+
+
+//TODO
+
+//3.2 Date Objects & Zero-Indexing Gotcha
+// let currDateTime = new Date();
+// console.log("Current Date/Time:", currDateTime);
+
+// let oneSecPastEpoch = new Date(1000);
+// console.log("1 Second Past Epoch:", oneSecPastEpoch);
+
+// let georgeBirthday = new Date(1732, 1, 22); //february printed, leap years?
+// console.log("George Washington's Birthday:", georgeBirthday);
+
+// let theFuture = new Date(2035, 9, 21, 7, 28, 0); //october printed - leap years?
+// console.log("Future Date:", theFuture);
+
+// 3.3 Math Object Random Number Generation
+
+//TODO
+
+
+// ==========================================================================
+// PART 4 — Exception Handling
+// ==========================================================================
+
+// 4.1 Unhandled Exception
+
+// function processOrder(itemCount, maxLimit) {
+//     if (itemCount <= 0) {
+//         throw "Item count must be greater than zero.";
+//     }
+//     if (itemCount > maxLimit) {
+//         throw "Order exceeds maximum limit.";
+//     }
+//     return `Order processed for ${itemCount} items.`;
+// }
+
+// console.log(processOrder(15, 10)); //program stops
+// console.log("System continuing standard execution...");//never prints
+
+
+//4.2 Handled Exception with try...catch
+// function processOrder(itemCount, maxLimit) {
+//     if (itemCount <= 0) {
+//         throw "Item count must be greater than zero.";
+//     }
+//     if (itemCount > maxLimit) {
+//         throw "Order exceeds maximum limit.";
+//     }
+//     return `Order processed for ${itemCount} items.`;
+// }
+// try {
+//     console.log(processOrder(15, 10));
+// } catch (error) {
+//     console.log("Caught Exception:", error);//prints order exceeds max limit
+// }
+// console.log("System continuing standard execution...");//runs
+
+// ==========================================================================
+// PART 5 — Application (E-Commerce Inventory Monitor)
+// ==========================================================================
+
+//TODO
+
+
+const formatSKU = (sku) => sku.trim().toUpperCase(); //1
+
+//product object literal
+const product = {
+  name: "wireless mouse",
+  price: 29.99,
+  get priceTag() {//2
+    return "$" + this.price.toFixed(2);
+  },
+};
+
+// 3
+const warehouseLocations = new Map();
+warehouseLocations.set(101, "Electronics");
+warehouseLocations.set(102, "Apparel");
+
+// 4
+function verifyStock(skuInput, aisleNumber) {
+  if (!skuInput) {
+    throw new Error("sku cannot be empty");
+  }
+
+  console.log("Checking SKU: " + formatSKU(skuInput));
+
+  if (warehouseLocations.has(aisleNumber)) {
+    console.log("ailse found: " + warehouseLocations.get(aisleNumber));
+  } else {
+    console.log("unassigned aisle");
+  }
+}
+
+
+//tests
+try {
+  
+  verifyStock(" sku-101 ", 101);
+  verifyStock(" sku-202 ", 999);
+  verifyStock("", 101);
+
+} catch (error) {
+  console.log("Error caught: " + error.message);
+}

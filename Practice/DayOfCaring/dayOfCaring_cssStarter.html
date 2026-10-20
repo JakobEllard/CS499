@@ -24,11 +24,11 @@
             color: #333;
             line-height: 1.6;
         }
-
+        /* padding: top bottom; */
         .nav-list{
             list-style: none;
-            padding: 0;
-            
+            padding: 10px 15px;
+        
         }
         .nav-item{
             display:inline-block;
@@ -79,11 +79,49 @@
       /* ---------- PART 3: The Box Model ---------- */
       /* 3.1 - 3.6 go here */
 
+       section{
+        padding:20px;
+        border: 2px solid var(--brand-orange);
+        margin: 20px 0;
+       }
+       main{
+        max-width: 900px;
+        margin: 0 auto;
+       }
+       table{
+        border-collapse: collapse;
+       }
 
+
+       th{
+        border: 2px solid red;
+        padding: 5px;
+       }
+       td{
+        border: 2px solid red;
+         padding: 5px;
+       }
 
       /* ---------- PART 4: Float & Clear ---------- */
       /* 4.1 - 4.2 goes here */
-
+       .stat-badge{
+        width: 100px;
+        padding: 5px;
+        border: 2px solid black;
+        float:left;
+       }
+       footer{
+        padding: 5px;
+        background-color: lime;
+        text-align: center;
+        color: red;
+        
+       }
+       footer a{
+       
+        color: var(--brand-purple);
+        
+       }
 
 
     </style>
@@ -113,6 +151,7 @@
             <h2>About Day of Caring</h2>
             <article>
                 <h3>Serving Vanderburgh, Warrick, and Spencer Counties</h3>
+                <div class ="stat-badge">Nearly 1001 Volunteers</div>
                 <p>The United Way of Southwestern Indiana Day of Caring is the largest coordinated volunteer service event in the region. Nearly a thousand volunteers from dozens of local companies and organizations come together to provide hands-on support to area non-profits.</p>
                 <p>Volunteers assist local organizations with landscaping, painting, outdoor clean-up, facility reorganization, computer setup, and interactive activities with youth and community members.</p>
             </article>
@@ -231,6 +270,7 @@
             <h2>Media & Video Coverage</h2>
             <article>
                 <h3>Past News Coverage: Annual Day of Caring</h3>
+                
                 <p>Watch the Eyewitness News WEHT/WTVW report highlighting volunteers during a past Day of Caring event:</p>
                 <iframe width="560" height="315"
                 src="https://www.youtube.com/embed/g0rhgqlObuI?si=J6_F21tvpg-Qr8eV"
