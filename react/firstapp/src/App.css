@@ -17,6 +17,8 @@
   }
 }
 
+ .intro h1 { color: rebeccapurple; }
+
 .hero {
   position: relative;
 
