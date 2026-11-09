@@ -1,3 +1,13 @@
+
+
+
+
+Live Prototype URL: (https://jakobellard.github.io/CS499/)
+
+ Setup & Run Instructions: download, npm run dev. no other req.
+
+
+Component Overview & Mock Data:
 I figured I probably better include a little cheat sheet so you can have something to refer to regarding all the terminology I'm going to be using
 
 Training Block- a typically 8 week progression followed by a deload week where you lower the weight to recover accumulated fatigue
