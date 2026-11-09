@@ -14,6 +14,7 @@ export default function BlockForm({ onCreate }) {
       plannedDays: Number(plannedDays),
       // block starts with one empty day.
       days: [{ type: 'Upper', setCount: 2, exercises: [] }],
+      
     })
   }
 
@@ -21,26 +22,33 @@ export default function BlockForm({ onCreate }) {
     <form className="panel" onSubmit={handleSubmit}>
       <h1>New Training Block</h1>
 
+
       <label>
         Block Name
         <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Summer bulk" />
       </label>
 
+
+
       <label>
         Calories
         <select value={goal} onChange={(e) => setGoal(e.target.value)}>
+
           <option value="surplus">Surplus</option>
           <option value="deficit">Deficit</option>
         </select>
       </label>
 
+
       <label>
         Planned training days
+
         <input
           type="number"
           min="1"
           value={plannedDays}
           onChange={(e) => setPlannedDays(e.target.value)}
+
         />
       </label>
 
